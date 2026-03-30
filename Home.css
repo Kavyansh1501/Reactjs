@@ -1,0 +1,50 @@
+
+.home-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f4c81, #3a7bd5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.home-card {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+}
+
+
+.home-title {
+  color: #0f4c81;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.home-btn {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #0f4c81;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #3a7bd5;
+  transform: translateY(-2px);
+}
+
+.home-btn:active {
+  transform: scale(0.98);
+}
