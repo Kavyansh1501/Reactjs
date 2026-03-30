@@ -1,28 +1,55 @@
-import React from 'react'
-import {useNavigate} from 'react-router-dom';
+import React,{useState} from 'react'
+import { Dash } from './Dash';
 
-export const Home = () => {
-  const navigate=useNavigate();
+export function Home () {
+    const[Uname,setname]=useState("");
+    const[password,setpassword]=useState("");
+    const[data,setdata]=useState(false);
 
-  const goToAbout=()=>{
-    navigate("/about");
-  }
-   const goToLogin=()=>{
-    navigate("/login");
-   }
-   const goToContact=()=>{
-    navigate("/contact");
-   }
+    const fun1=(e)=>{
+        setname(e.target.value);
+    }
+    const fun2=(e)=>{
+        setpassword(e.target.value);
+    }
+
+    
+
+    const submit=()=>{
+        if(Uname==="kavyansh" && password==="12345"){
+            alert("login is successful");
+            setdata(true);
+        }
+        else{
+            alert("login failed");
+        }
+    }
   return (
     <div>
-      <h1>home</h1>
-      
-      <button onClick={goToAbout}>go to about</button>
-      <br/>
-      <button onClick={goToLogin}>go to Login</button>
-      <br/>
-      <button onClick={goToContact}>go to contact</button>
+        {data?(<Dash/>):<>
+        
+            <h1 className="login-title">Login</h1>
 
-    </div>
-  );
-};
+            <input 
+              className="login-input"
+              type="text" 
+              placeholder='Enter Username' 
+              value={Uname} 
+              onChange={fun1}
+            />
+
+            <input 
+              className="login-input"
+              type='password' 
+              placeholder="Enter Password"
+              value={password} 
+              onChange={fun2}
+            />
+
+            <button className="login-btn" onClick={submit}>
+              Login
+            </button>
+            </>}
+        </div>
+  )
+}
