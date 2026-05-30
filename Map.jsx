@@ -1,6 +1,6 @@
 import React from "react";
 function Map() {
-    const students = [{ name: "kavyansh", age: 25 }, { name: "kishu", age: 12 }, { name: "kavya", age: 15 }];
+    const students = [{ name: "kavyansh", age: 21 }, { name: "kishu", age: 12 }, { name: "kavya", age: 15 }];
     return (
         <div>
 
